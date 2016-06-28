@@ -1,0 +1,106 @@
+$blue:   #2A74BF;
+$red:    #D7514C;
+$green:  #4D944B;
+$orange: #D8C11D;
+$grey:   #666;
+$white:  #fff;
+$mainColor: $blue;
+$break-phone: 320px;
+$break-tablet: 800px;
+$break-large: 1200px;
+
+#bootstrap-overrides {
+	ul.nav{
+		.active {
+			a {
+			background-color: $mainColor;
+			color: $white;
+			}
+		}
+	}	
+}
+.page-header {
+	color: $mainColor;
+	border-bottom: 1px solid $mainColor;
+}
+.description-caption {
+	color: $mainColor;
+}
+#bootstrap-overrides {
+	.thumbnail {
+	padding: 0;
+	border-radius: 0;
+	}
+	.caption {
+		text-align: center;
+		color: $white;
+	}
+}
+a.cardio {
+	text-decoration: none;
+}	
+a.fitness {
+	@extend a.cardio;
+}
+a.zumba {
+	@extend a.cardio;
+}
+a.bootcamp {
+	@extend a.cardio;
+}
+.thumbnail.cardio{
+	background-color: $red;
+	border: 1px solid $red;
+
+	&:hover {
+		background-color: darken($red, 20%);
+		border: 1px solid darken($red, 20%);
+	}
+}
+.thumbnail.fitness{
+    background-color: $blue;
+	border: 1px solid $blue;
+
+	&:hover {
+		background-color: darken($blue, 20%);
+		border: 1px solid darken($blue, 20%);
+	}
+}
+.thumbnail.zumba{
+	background-color: $orange;
+	border: 1px solid $orange;
+
+	&:hover {
+		background-color: darken($orange, 20%);
+		border: 1px solid darken($orange, 20%);
+	}
+}
+.thumbnail.bootcamp{
+	background-color: $green;
+	border: 1px solid $green;
+
+	&:hover {
+		background-color: darken($green, 20%);
+		border: 1px solid darken($green, 20%);
+	}
+}
+.panel-footer {
+	border-radius: 0;
+	background-color: #666;
+	color: $white;
+}
+@media (max-width: $break-phone){
+	.cardio {
+	   .caption {
+		margin-top: -6%;
+		margin-bottom: -6%;
+		}
+	}
+}
+@media (max-width: $break-large) {
+	a {
+	  .thumbnail { 
+      pointer-events: none !important;
+	  }
+	}
+}

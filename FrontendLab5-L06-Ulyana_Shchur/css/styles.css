@@ -1,0 +1,179 @@
+body {
+	margin: 0;
+
+}
+header {
+	margin: 0 500px 0 0;
+	padding: 90px;
+	background-color: #39c2d7;
+}
+
+/* FOR FONTAWESOME MAIN ICONS USABILITY */
+
+.step-unit {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  /*text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
+}
+.step-unit::before {
+	text-align: center;
+	line-height: 65px;
+	font-size: 1.8em;
+}
+
+/* BUTTONS  AND SECONDARY ICONS */
+
+a::before {
+	display: block;
+	width: 65px;
+	height: 65px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+    background-color: #E6E6E6;
+    border-radius: 50%;
+    border: 3px solid #217482;
+    box-shadow: 
+    -10px -10px 30px rgba(255,255,255,0.3),
+    inset 1px 1px 2px rgba(255,255,255,0.3), 
+    inset 0px 3px 2px rgba(255,255,255,1),
+    inset -4px -15px 25px rgba(144,144,144,0.5),
+    inset -3px -10px 20px rgba(144,144,144,0.5),
+    inset -2px -5px 15px rgba(144,144,144,0.5),
+    inset -1px 0px 0px rgba(144,144,144,0.5),
+    1px 5px 40px -2px rgba(144,144,144,0.5),
+    1px 5px 10px -2px rgba(0,0,0,.7); 
+}
+.done::after {
+	font-family: FontAwesome;
+	content: "\f00c";
+	font-size: 1.4em;
+	position: absolute;
+	left: 135px;
+	top: 30px;
+	color: white;
+	text-shadow: 1px 3px 2px rgba(40,137,151,1);
+}
+.active::before {
+	display: block;
+	width: 65px;
+	height: 65px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+    background-color: #F4FF4E;
+    border-radius: 50%;
+    border: 3px solid #217482;
+    box-shadow: 
+    -10px -10px 30px rgba(255,255,255,0.3),
+    inset 1px 1px 2px rgba(255,255,255,0.3), 
+    inset 0px 3px 2px rgba(255,255,255,1),
+    inset -4px -15px 25px rgba(149,156,47,0.5),
+    inset -3px -10px 20px rgba(149,156,47,0.5),
+    inset -2px -5px 15px rgba(149,156,47,0.5),
+    inset -1px 0px 0px rgba(149,156,47,0.7),
+    1px 5px 40px -2px rgba(255,255,255,0.5),
+    1px 5px 10px -2px rgba(0,0,0,.7);   
+}
+.disabled::before {
+	display: block;
+	width: 65px;
+	height: 65px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+    background-color: #E6E6E6;
+    border-radius: 50%;
+    border: 3px solid #217482;
+    box-shadow: 
+    -10px -10px 30px rgba(255,255,255,0.3),
+    inset 1px 1px 2px rgba(255,255,255,0.3), 
+    inset 0px 3px 2px rgba(255,255,255,1),
+    inset -4px -15px 25px rgba(144,144,144,0.5),
+    inset -3px -10px 20px rgba(144,144,144,0.5),
+    inset -2px -5px 15px rgba(144,144,144,0.5),
+    inset -1px 0px 0px rgba(144,144,144,0.5),
+    1px 5px 40px -2px rgba(144,144,144,0.5),
+    1px 5px 10px -2px rgba(0,0,0,0.7);  
+}
+.fa-coffee::before {
+	margin-left: 0;
+}
+.active::after {
+	font-family: FontAwesome;
+	content: "\f061";
+	font-size: 1.4em;
+	position: absolute;
+	left: 135px;
+	top: 30px;
+	color: white;
+	text-shadow: 1px 3px 2px rgba(40,137,151,1);
+}
+.disabled.fa-comments::after {
+	font-family: FontAwesome;
+	content: "\f061";
+	font-size: 1.4em;
+	position: absolute;
+	left: 135px;
+	top: 30px;
+	color: rgb(40,137,151);
+	text-shadow: 1px 1px 2px rgba(255,255,255,1);
+}
+.fa-file-text-o::first-line, .fa-envelope-o::first-line {
+	color: #39c2d7;
+	text-shadow: none;
+	font-family: FontAwesome;
+}
+.fa-comments::first-line, .fa-coffee::first-line {
+	color: #7D7D7D;
+	text-shadow: none;
+	font-family: FontAwesome;
+}
+.fa-file-text-o, .fa-envelope-o, .fa-comments, .fa-coffee {
+	font: normal 14px/1.2 Arial, Helvetica, sans-serif;
+	color: white;
+	text-shadow: 1px 3px 2px rgba(40,137,151,1)
+}
+.fa-file-text-o {
+	position: absolute;
+	top: 30px;
+	left: 50px;
+
+}
+.fa-envelope-o{
+	position: absolute;
+	top: 30px;
+	left: 250px;
+}
+.fa-comments {
+	position: absolute;
+	top: 30px;
+	left: 450px;
+}
+.fa-coffee {
+	position: absolute;
+	top: 30px;
+	left: 650px;
+}
+
+/* ANIMATION */
+
+a:hover {
+	transition: all 0.2s ease;
+	color: #F4FF4E;
+}
+a:hover:before {
+	transition: all 0.2s ease;
+	background-color: #F4FF4E;
+}
+a:active:before {
+	transition: all 0.2s ease;
+	background-color: #F4FF4E;
+	box-shadow:
+	inset 1px 1px 2px rgba(147,147,147,0.3), 
+    inset 0px 3px 2px rgba(147,147,147,1),
+    inset 4px 15px 25px rgba(149,156,47,0.5),
+    inset 3px 10px 20px rgba(149,156,47,0.5),
+    inset 2px 5px 15px rgba(149,156,47,0.5),
+    inset 1px 0px 0px rgba(149,156,47,0.7); 
+}

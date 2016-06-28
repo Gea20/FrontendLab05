@@ -1,0 +1,61 @@
+#bootstrap-overrides ul.nav .active a {
+  background-color: #2A74BF;
+  color: #fff; }
+
+.page-header {
+  color: #2A74BF;
+  border-bottom: 1px solid #2A74BF; }
+
+.description-caption {
+  color: #2A74BF; }
+
+#bootstrap-overrides .thumbnail {
+  padding: 0;
+  border-radius: 0; }
+#bootstrap-overrides .caption {
+  text-align: center;
+  color: #fff; }
+
+a.cardio, a.fitness, a.zumba, a.bootcamp {
+  text-decoration: none; }
+
+.thumbnail.cardio {
+  background-color: #D7514C;
+  border: 1px solid #D7514C; }
+  .thumbnail.cardio:hover {
+    background-color: #9a2723;
+    border: 1px solid #9a2723; }
+
+.thumbnail.fitness {
+  background-color: #2A74BF;
+  border: 1px solid #2A74BF; }
+  .thumbnail.fitness:hover {
+    background-color: #18416b;
+    border: 1px solid #18416b; }
+
+.thumbnail.zumba {
+  background-color: #D8C11D;
+  border: 1px solid #D8C11D; }
+  .thumbnail.zumba:hover {
+    background-color: #7e7111;
+    border: 1px solid #7e7111; }
+
+.thumbnail.bootcamp {
+  background-color: #4D944B;
+  border: 1px solid #4D944B; }
+  .thumbnail.bootcamp:hover {
+    background-color: #2a5029;
+    border: 1px solid #2a5029; }
+
+.panel-footer {
+  border-radius: 0;
+  background-color: #666;
+  color: #fff; }
+
+@media (max-width: 320px) {
+  .cardio .caption {
+    margin-top: -6%;
+    margin-bottom: -6%; } }
+@media (max-width: 1200px) {
+  a .thumbnail {
+    pointer-events: none !important; } }

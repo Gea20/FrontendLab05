@@ -1,0 +1,154 @@
+/* Code for print version by Ulyana Shchur */
+
+@media print {
+
+    /* Adjustment of the document body */
+
+	body, .tm-main-content {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		overflow: auto;
+	}
+	h2 {
+		page-break-after: avoid;
+	}
+
+	/* Adjustment of the banner */
+
+	.tm-banner-inner {
+		height: 70%;
+	}
+
+	/* To remove unnecessary elements from printed version */
+
+	.tm-sidebar, .tm-main-nav, #about, section#ideas, img.img-fluid, div#contact, #list, #gallery {
+		display: none;
+	}
+
+	/* Adjustment of the description container 'Our Team' */
+	
+	.tm-team-description-container {
+		display: block;
+		height: 70%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 300px;
+		left: 80px;
+	}
+
+	/* Adjustment of the text within the description container */
+	
+	.tm-section-description {
+		width: 570px;
+		text-align: justify;
+		margin-bottom: 10px;
+	}
+
+	/* Adjustment of the image 'About' */
+	
+	.flex-item img {
+		display: block;
+		height: 450px;
+		width: 300px;
+		position: absolute;
+		top: 500px;
+		left: 200px;
+	}
+
+	/* Adjustment of the footer */
+	
+	footer {
+		position: absolute;
+		top: 950px;
+		left: 150px;
+		margin-top: 10px;
+		text-align: justify;
+	}
+}
+
+/* Adjusting for browser view */
+
+@media screen {
+
+  	/* Border adjustment in the boxes */
+
+	li.box:nth-child(n+1) {
+		margin-left: -1px;
+		margin-bottom: -1px; 
+	}
+    li.box:nth-child(3n+1) {
+		margin-left: 1px;
+	}
+
+	/* Adjustment of the first letters of each paragraph */
+	
+	p::first-letter {
+		color: red;
+		font-size: 25px;
+	}
+
+	/* Adding box shadow to sidebar and each content block */
+	
+	.tm-sidebar, .tm-content-box {
+		box-shadow: 0 0 10px #888888;
+	}
+
+	/* Adding silver border to each img which is in <a> tag in gallery-container */
+	a > img {
+		border: 1px solid silver;
+	}
+
+	/* Changing color of ‘Our Ideas’ to black */
+
+	.carousel-content .flex-item h2 {
+		color: black;
+	}
+
+	/* Changing font style of each first paragraph which placed after h2 tag to italic */
+
+	h2 + p, h3 + p {
+		font-style: italic;
+	}
+
+	/* Styles for new content blocks */
+
+	a.top::after {
+		content: "NEW!";
+		vertical-align: super;
+		color: red;
+	}
+	ol > li > a:visited {
+		color: silver;
+	}
+	li img {
+		max-width: 150px;
+	    max-height: 150px;
+	}
+	h3.gallery-item-heading {
+		color: black;
+		position: relative;
+	}
+	h3 + p {
+		color: black;
+	}
+	h3 + p::first-letter {
+		color: black;
+		font-size: 25px;
+	}
+
+	/* Silver border for sidebar */
+
+	.tm-nav-item {
+		border-bottom: 1px solid silver;
+	}
+	.tm-nav-item:last-child {
+		border-bottom: none;
+	}
+    /* Changing of text color in text input and submit button to red */
+    input[type=text], button[type] {
+    	color: red;
+    }
+}

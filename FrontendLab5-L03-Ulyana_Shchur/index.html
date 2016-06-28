@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LO3_Ulyana_Shchur</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            fieldset {
+                border: 1px solid grey;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            label {
+                width: 150px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+    	    <div id="main">
+    		    <div id="container">
+    			    <div id="content" role="main">
+                        <h1>Order Form</h1>
+                        <form method="post">
+                        <fieldset>
+                        <legend>General Info</legend>
+                        <div class="form-row">
+                            <label>Email</label>
+                            <input type="email" name="Email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-row">
+                            <label>Login</label>
+                            <input type="text" name="Name" placeholder="Login" pattern="[A-Za-z]{3,10}[1-3]{1,3}" title="Must contain: 3-10 uppercase and lowercase letters; 1-3 digits (1, 2, 3 only)" required>
+                        </div>
+                        <div class="form-row">
+                            <label>Password</label>
+                            <input type="password" name="Password" placeholder="Password" required>
+                        </div>
+                        </fieldset>
+                        <fieldset>
+                        <legend>User Info</legend>
+                        <div class="form-row">
+                            <label>First Name</label>
+                            <input type="text" name="First Name" placeholder="John" pattern="[A-Za-z]{3,15}" title="Must contain 3-15 uppercase and lowercase letters" required>
+                        </div>
+                        <div class="form-row">
+                            <label>Second Name</label>
+                            <input type="text" name="Second Name" placeholder="Doe" pattern="[A-Za-z]{3,15}" title="Must contain only 3-15 uppercase and lowercase letters" required>
+                        </div>
+                        <div class="form-row">
+                            <label>Gender</label>
+                            Male<input type="checkbox" name="Gender" value="Male" checked>
+                            Female<input type="checkbox" name="Gender" value="Female">
+                        </div>
+                        <div class="form-row">
+                            <label>Age</label>
+                            <input type="number" name="Age" min="1" placeholder="32" required>    
+                        </div>
+                        <div class="form-row">
+                            <label>About Me</label>
+                            <textarea cols="20" rows="6" disabled>
+                            </textarea>
+                        </div>
+                        </fieldset>
+                        <fieldset>
+                        <legend>Order Info</legend>
+                        <div class="form-">
+                            <label>Product</label>
+                            <select name="Select" required>
+                                <option value="iPhone">iPhone</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Nexus">Nexus</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label>Front Color</label>
+                            Black<input type="radio" name="Color" value="Black" required>
+                            Pink<input type="radio" name="Color" value="Pink">
+                            Gold<input type="radio" name="Color" value="Gold">
+                        </div>
+                        <div class="form-row">
+                            <label>Back-side Color</label>
+                            <input type="color" name="Color">
+                        </div>
+                        <div class="form-row">
+                            <label>Amount</label>
+                            <input type="number" name="Amount" min="1" placeholder="5" required>    
+                        </div>
+                        <div class="form-row">
+                            <label>Delivery Date</label>
+                            <input type="date" name="Date" readonly>
+                        </div>
+                        </fieldset>
+                        <input type="reset" name="Reset">
+                        <input type="submit" name="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
